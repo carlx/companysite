@@ -5,3 +5,9 @@ node_modules
 .idea/misc.xml
 .idea/modules.xml
 .idea/workspace.xml
+.idea
+.DS_Store
+client/.DS_Store
+server/.DS_Store
+client/npm-debug.log
+
