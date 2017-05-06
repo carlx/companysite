@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AXIS SOFTWARE</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="images/favicon.png" >
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/libs/materialize/css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/css/bootstrap.css" media="screen,projection" />
+
+  <link rel="stylesheet" href="assets/css/animate.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/sweetalert/sweet-alert.css" media="screen,projection" />
+
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.carousel.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.transitions.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.theme.css" media="screen,projection" />
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Choose your default colors -->
+  <link rel="stylesheet" href="assets/css/colors/color1.css">
+  <!-- <link rel="stylesheet" href="assets/css/colors/color2.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color3.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color4.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color5.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color6.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color7.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color8.css"> -->
+
+  <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+  <![endif]-->
+
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+
+  <!-- Preloader --> 
+    <div id="preloader">
+      <div class="loader">
+            <svg class="circle-loader" height="50" width="50">
+              <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+            </svg>
+        </div>    
+    </div><!--preloader end-->
+
+  <!-- Main Container -->
+  <main id="app" class="main-section">
+    <!-- header navigation start -->
+    <header id="navigation" class="root-sec white nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="nav-inner">
+              <nav class="primary-nav">
+                <div class="clearfix nav-wrapper">
+                  <a href="#home" class="left brand-logo menu-smooth-scroll" data-section="#home">
+					  <img src="images/log.png" style="margin-bottom: 10px">
+                  </a>
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                  <ul class="right static-menu">
+                    <li class="search-form-li">
+
+                    </li>
+                    <li>
+                    </li>
+                  </ul>
+					<ul class="inline-menu side-nav" id="mobile-demo">
+
+						<!-- Mini Profile // only visible in Tab and Mobile -->
+						<li class="mobile-profile">
+							<div class="profile-inner">
+								<div class="pp-container">
+									<img src="images/person.jpg" alt="">
+								</div>
+								<h3>John Doe</h3>
+								<h5>Creative UI/UX Expert</h5>
+							</div>
+						</li><!-- mini profile end-->
+
+
+						<li class=""><a href="#home" data-section="#about" class="menu-smooth-scroll"><i class="fa fa-user fa-fw"></i>Home</a>
+						</li>
+						<li class=""><a href="#blog" data-section="#blog" class="menu-smooth-scroll"><i class="fa fa-file-text fa-fw"></i>Technologie</a>
+						</li>
+						<li class=""><a href="#blog" data-section="#blog" class="menu-smooth-scroll"><i class="fa fa-pencil fa-fw"></i>Blog</a>
+						</li>
+						<li class=""><a href="#contact" data-section="#contact" class="menu-smooth-scroll"><i class="fa fa-paper-plane fa-fw"></i>Kontakt</a>
+						</li>
+					</ul>
+                
+                  
+
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .container end -->
+    </header>
+    <!-- #header  navigation end -->
+
+    <!-- Home Section start -->
+    <section id="home" class="scroll-section root-sec grey lighten-5 home-wrap">
+      <div class="sec-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-inner">
+                  <div class="center-align home-content">
+                    <h1 class="home-title">Web <span>development</span></h1>
+                    <!--<h2 class="home-subtitle">Your Vision, Our Future.</h2>-->
+                    <a href="#contact" class="hire-me-btn btn waves-effect waves-light btn-large brand-bg white-text regular-text">Kontakt
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container end -->
+        <div class="section-call-to-area">
+          <div class="container">
+            <div class="row">
+              <a href="#blog" class="btn-floating btn-large button-middle call-to-about section-call-to-btn animated btn-up btn-hidden" data-section="#blog">
+                <i class="mdi-navigation-expand-more"></i>
+              </a>
+            </div>
+          </div>
+          <!-- .container end -->
+        </div>
+      </div>
+    </section>
+    <!-- #home Section end -->
+
+	  <section id="blog" class="scroll-section root-sec grey lighten-5 padd-tb-120 blog-wrap">
+		  <div class="container">
+			  <div class="row">
+				  <div class="blog-inner">
+					  <div class="col-sm-12 card-box-wrap">
+						  <div class="row">
+							  <div class="clearfix section-head blog-text">
+								  <div class="col-sm-10">
+									  <h2 class="title">Technologie</h2>
+									  <!--<p class="regular-text">A Web page that serves as a publicly accessible personal journal for an individual. Typically updated daily, blogs often reflect the personality of the author.</p>-->
+								  </div>
+							  </div>
+							  <div class="clearfix card-element-wrapper" id="blog-posts" style="position: relative; height: 487px;">
+								  <article class="col-sm-3 col-md-2 single-card-box single-post" style="position: absolute; left: 0px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/angular1.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+													  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">Awesome Post Title</h2></a>-->
+													  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+											  <!--<a href="#" class="left js-favorite" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">15</span></a>-->
+											  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/js.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+													  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+													  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+											  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+											  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/bootstrap.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-3 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/html5.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/css3.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/ts.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/gulpjs.jpg" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/symfony3.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/angular2.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/sqlsrv.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/postgres.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/react.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/php.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/webpack.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/docker.png" alt="">
+													  </a>
+												  </div>
+											  </div>
+										  </div>
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/material.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/es6.png" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+								  <article class="col-sm-4 col-md-2  single-card-box single-post" style="position: absolute; left: 390px; top: 0px;">
+									  <div class="card wow fadeInUpSmall animated" data-wow-delay=".2s" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUpSmall;">
+										  <div class="card-image">
+											  <div class="card-img-wrap">
+												  <div class="blog-post-thumb waves-effect waves-block waves-light">
+													  <a href="single.html">
+														  <img class="activator" src="images/node.jpg" alt="">
+													  </a>
+												  </div>
+												  <!--<div class="post-body">-->
+												  <!--<a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>-->
+												  <!--<p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>-->
+												  <!--</div>-->
+											  </div>
+										  </div>
+										  <!--<div class="clearfix card-content">-->
+										  <!--<a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>-->
+										  <!--<a href="single.html" class="brand-text right waves-effect">Read More</a>-->
+										  <!--</div>-->
+									  </div>
+								  </article> <!-- ./single blog post end -->
+
+							  </div>
+							  <div class="clearfix left-align">
+
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div> <!-- ./container -->
+	  </section>
+
+
+	  <section id="portfolio" class="scroll-section root-sec white portfolio-wrap">
+		  <div class="padd-tb-120 brand-bg portfolio-top">
+			  <div class="portfolio-inner">
+				  <div class="container">
+					  <div class="row">
+						  <div class="col-sm-12">
+							  <h2 class="title">PORTFOLIO</h2>
+							  <ul class="inline-menu clearfix portfolio-category" id="portfolio-msnry-sort">
+								  <li class="active"><a href="#" data-target="*">All</a>
+								  </li>
+								  <li><a href="#" data-target=".category-1">Art</a>
+								  </li>
+								  <li><a href="#" data-target=".category-2">Accessories</a>
+								  </li>
+								  <li><a href="#" data-target=".category-3">Design</a>
+								  </li>
+								  <li><a href="#" data-target=".category-4">Fashion</a>
+								  </li>
+							  </ul>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+			  <!-- .container end -->
+		  </div>
+		  <div id="portfolioModal" class="modal white">
+			  <div class="model-img"></div>
+			  <div class="modal-content">
+				  <h2 class="title">Lorem ipsum dolor sit fugit dolore.</h2>
+				  <p class="m-content">A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior.</p>
+			  </div>
+
+			  <div class="modal-footer">
+				  <a href="#" target="_blank" class="waves-effect btn-flat brand-text modal-action">Live Demo</a>
+				  <a href="#" class="waves-effect btn-flat brand-text modal-action modal-close">cancel</a>
+			  </div>
+		  </div>
+
+		  <div class="portfolio-bottom">
+			  <div class="container">
+				  <div class="row">
+					  <div class="col-sm-12">
+						  <ul class="clearfix protfolio-item" id="protfolio-msnry" style="position: relative; height: 548.312px;">
+
+							  <!-- Single Portfolio-->
+							  <li class="single-port-item category-1 category-3" style="position: absolute; left: 0px; top: 0px;">
+								  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#"> <!-- Portfolio pop-up content-->
+									  <div class="protfolio-image">
+										  <img src="images/portfolio/pf1.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+										  <div class="protfolio-content waves-effect waves-block waves-light">
+											  <div class="protfolio-content__inner">
+												  <h2 class="p-title">item name</h2>
+											  </div>
+										  </div>
+										  <div class="p-overlay"></div>
+									  </div>
+								  </a>
+							  </li>
+							  <!--/ single portfolio -->
+
+							  <!-- Single Portfolio-->
+							  <li class="single-port-item category-2 category-1" style="position: absolute; left: 379px; top: 0px;">
+								  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+									  <div class="protfolio-image">
+										  <img src="images/portfolio/pf2.jpg" alt="portfolio">
+										  <div class="protfolio-content waves-effect waves-block waves-light">
+											  <div class="protfolio-content__inner">
+												  <h2 class="p-title">item name</h2>
+											  </div>
+										  </div>
+										  <div class="p-overlay"></div>
+									  </div>
+								  </a>
+							  </li>
+							  <!--/ single portfolio -->
+
+							  <!-- Single Portfolio-->
+							  <li class="single-port-item category-1 category-2" style="position: absolute; left: 759px; top: 0px;">
+								  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+									  <div class="protfolio-image">
+										  <img src="images/portfolio/pf3.jpg" alt="portfolio">
+										  <div class="protfolio-content waves-effect waves-block waves-light">
+											  <div class="protfolio-content__inner">
+												  <h2 class="p-title">item name</h2>
+											  </div>
+										  </div>
+										  <div class="p-overlay"></div>
+									  </div>
+								  </a>
+							  </li>
+							  <!--/ single portfolio -->
+
+							  <!-- Single Portfolio-->
+							  <li class="single-port-item category-3" style="position: absolute; left: 0px; top: 274px;">
+								  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+									  <div class="protfolio-image">
+										  <img src="images/portfolio/pf4.jpg" alt="portfolio">
+										  <div class="protfolio-content waves-effect waves-block waves-light">
+											  <div class="protfolio-content__inner">
+												  <h2 class="p-title">item name</h2>
+											  </div>
+										  </div>
+										  <div class="p-overlay"></div>
+									  </div>
+								  </a>
+							  </li>
+							  <!--/ single portfolio -->
+
+							  <!-- Single Portfolio-->
+							  <li class="single-port-item category-1 category-3 category-4" style="position: absolute; left: 379px; top: 274px;">
+								  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+									  <div class="protfolio-image">
+										  <img src="images/portfolio/pf5.jpg" alt="portfolio">
+										  <div class="protfolio-content waves-effect waves-block waves-light">
+											  <div class="protfolio-content__inner">
+												  <h2 class="p-title">item name</h2>
+											  </div>
+										  </div>
+										  <div class="p-overlay"></div>
+									  </div>
+								  </a>
+							  </li>
+							  <!--/ single portfolio -->
+
+							  <!-- Single Portfolio-->
+							  <li class="single-port-item category-2 category-4" style="position: absolute; left: 759px; top: 274px;">
+								  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+									  <div class="protfolio-image">
+										  <img src="images/portfolio/pf6.jpg" alt="portfolio">
+										  <div class="protfolio-content waves-effect waves-block waves-light">
+											  <div class="protfolio-content__inner">
+												  <h2 class="p-title">item name</h2>
+											  </div>
+										  </div>
+										  <div class="p-overlay"></div>
+									  </div>
+								  </a>
+							  </li>
+							  <!--/ single portfolio -->
+
+						  </ul>
+						  <!-- portfolio load more button-->
+						  <a id="portfolio-item-loader" href="#" class="btn-floating btn-large waves-effect waves-light brand-bg"><i class="mdi-content-add"></i></a>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+
+
+    <!-- Contact Section end -->
+    <section id="contact" class="scroll-section root-sec brand-bg padd-tb-120 contact-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="contact-inner">
+            <div class="col-sm-12 card-box-wrap">
+              <div class="row">
+                <div class="clearfix section-head contact-text">
+                  <div class="col-sm-12">
+                    <h2 class="title">Kontakt</h2>
+                    <p class="regular-text"><b>Axis Karol Wawrzecki</b></p>
+                    <p class="regular-text">NIP: 6351693090</p>
+                    <p class="regular-text">REGON: 367172350</p>
+                    <p class="regular-text">43-187 Orzesze 1000 - lecia 10</p>
+                    <ul class="clearfix contact-info">
+                      <li><a href="">+48 796 407 535</a>
+                      </li>
+                      <li><a href="">kwawrzecki@gmail.com</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div> <!-- contact text end -->
+
+                <div class="clearfix contact-form">
+
+                <!-- Map Start -->
+                  <div class="col-sm-7">
+                    <div class="map-wrapper">
+                      <div id="map"></div>
+                    </div>
+                  </div> <!-- Map end -->
+
+                <!-- Contact Form start -->
+                  <div class="col-sm-5">
+                    <div class="clearfix card-panel grey lighten-5 cform-wrapper">
+                      <form action="#" id="contactForm" novalidate>
+                        <div class="input-field">
+                          <input  id="contact_name" type="text" name="contactName" class="validate input-box" autocomplete="off">
+                          <label for="contact_name" class="input-label">Name</label>
+                        </div>
+                        <div class="input-field">
+                          <input  id="email" type="email" name="contactEmail" class="validate input-box" autocomplete="off">
+                          <label for="email" class="input-label">E-mail</label>
+                        </div>
+                        <div class="input-field">
+                          <input  id="subject" type="text" name="contactSubject" class="validate input-box" autocomplete="off">
+                          <label for="subject" class="input-label">Subject</label>
+                        </div>
+                        <div class="input-field textarea-input">
+                          <textarea  id="textarea1" name="contactMessage" class="validate materialize-textarea" style="height: 22px;" autocomplete="off"></textarea>
+                          <label for="textarea1" class="input-label">Message</label>
+                        </div>
+                        <div class="g-recaptcha"
+                             data-sitekey="6LcveB8UAAAAAPxX2BE77vz2jfZ0te3Ku6L50QKt"
+                             data-expired-callback="expiredHuman"
+                             data-callback="imNotARobot">
+                        </div>
+                        <div class="input-field submit-wrap clearfix">
+                          <button type="submit" class="left waves-effect btn-flat brand-text submit-btn">Wyślij wiadomość</button>
+                          <div class="right form-loader-area">
+                            <svg class="circular size-20" height="20" width="20">
+                              <circle class="path" cx="10" cy="10" r="7" fill="none" stroke-width="3" stroke-miterlimit="10" />
+                            </svg>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div> <!-- ./contact form end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./container end -->
+      <div class="section-call-to-area">
+        <div class="container">
+          <div class="row">
+            <a href="#home" class="btn-floating btn-large button-middle call-to-home section-call-to-btn animated btn-up btn-hidden" data-section="#home">
+              <i class="mdi-navigation-expand-less"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #contact Section end -->
+
+    <!-- Footer Section end -->
+    <footer id="footer" class="root-sec white root-sec footer-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="clearfix footer-inner">
+              <ul class="left social-icons">
+                <li><a href="#" class="tooltips tooltipped facebook" data-position="top" data-delay="50" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="#" class="tooltips tooltipped linkedin" data-position="top" data-delay="50" data-tooltip="Linkdin"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li><a href="#" class="tooltips tooltipped twitter" data-position="top" data-delay="50" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li><a href="#" class="tooltips tooltipped google-plus" data-position="top" data-delay="50" data-tooltip="Google Plus"><i class="fa fa-google-plus"></i></a>
+                </li>
+                <li><a href="#" class="tooltips tooltipped dribbble" data-position="top" data-delay="50" data-tooltip="Dribbble"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li><a href="#" class="tooltips tooltipped behance" data-position="top" data-delay="50" data-tooltip="Behance"><i class="fa fa-behance"></i></a>
+                </li>
+              </ul> <!-- ./social icons end -->
+              <div class="right copyright">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./container end-->
+    </footer>
+    <!-- #footer end -->
+
+  </main>
+  <!-- Main Container end-->
+
+
+  <!-- JavaScripts -->
+  <script type="text/javascript" src="https://tympanus.net/Development/AnimatedHeaderBackgrounds/js/TweenLite.min.js"></script>
+  <script type="text/javascript" src="https://tympanus.net/Development/AnimatedHeaderBackgrounds/js/EasePack.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/detectmobilebrowser.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/jquery.nicescroll.min.js"></script>
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+  <!--<script async defer src="https://maps.google.com/maps/api/js?key=AIzaSyBVYdEQqY3XnIu1b3hVTczk1Keu_7LnhQs&sensor=true"-->
+		  <!--type="text/javascript"></script>-->
+  <script src="assets/js/gmaps.js"></script>
+  <script src="assets/libs/owl-carousel/owl.carousel.min.js"></script>
+  <script src="assets/libs/materialize/js/materialize.min.js"></script>
+  <script src="assets/libs/jwplayer/jwplayer.js"></script>
+  <script src="assets/libs/sweetalert/sweet-alert.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.rawgit.com/UribeAbraham/jquery.canvas.particles/master/src/js/jquery.canvas.particles.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"></script>
+</body>
+
+</html>

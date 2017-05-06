@@ -1,0 +1,861 @@
+"use strict";
+var scrollDirection, $ = jQuery;
+
+// for scrolling to targeted sections
+
+(function($){
+	$.fn.scrollingTo = function( opts ) {
+		var defaults = {
+			animationTime : 1000,
+			easing : '',
+			topSpace : 0,
+			callbackBeforeTransition : function(){},
+			callbackAfterTransition : function(){}
+		};
+
+		var config = $.extend( {}, defaults, opts );
+
+	    $(this).on('click', function(e){
+	    	var eventVal = e;
+	    	e.preventDefault();
+
+	    	var $section = $(document).find( $(this).data('section') );
+	    	if ( $section.length < 1 ) {
+	    		return false;
+	    	}
+
+	        if ( $('html, body').is(':animated') ) {
+	            $('html, body').stop( true, true );
+	        }
+
+	        var scrollPos = $section.offset().top;
+
+	        if ( $(window).scrollTop() == ( scrollPos + config.topSpace ) ) {
+	        	return false;
+	        }
+
+	        config.callbackBeforeTransition(eventVal, $section);
+
+	        var newScrollPos = (scrollPos - config.topSpace);
+
+	        $('html, body').animate({
+	            'scrollTop' : ( newScrollPos+'px' )
+	        }, config.animationTime, config.easing, function(){
+	        	config.callbackAfterTransition(eventVal, $section);
+	        });
+
+	        return $(this);
+	    });
+
+	    $(this).data('scrollOps', config);
+	    return $(this);
+	};
+}(jQuery));
+
+$(document).ready(function($){
+
+	var sklSlider = $("#skillSlider");
+
+	
+	// sklSlider.owlCarousel({
+	// 	slideSpeed: 400,
+	// 	items : 6,
+	// 	itemsDesktop : false,
+	// 	itemsDesktopSmall : [991, 8],
+	// 	itemsTablet: [768, 8],
+	// 	itemsTabletSmall: [600, 6],
+	// 	itemsMobile : [479, 4],
+	// 	pagination : false
+	// });
+
+	sklSlider.owlCarousel({
+		slideSpeed: 400,
+		itemsCustom: [
+			[0, 3],
+			[400, 4],
+			[500, 5],
+			[620, 6],
+			[700, 8],
+			[992, 5],
+			[1200, 6]
+		],
+		pagination : false
+	});
+
+
+	var sklData = sklSlider.data('owlCarousel');
+
+
+	var sklTgt = $('.skl-ctrl').find('.go');
+	sklTgt.on('click', function(e){
+		e.preventDefault();
+		if( $(this).hasClass('go-left') ) {
+			sklData.prev();
+		} else {
+			sklData.next();
+		}
+	});
+
+
+	var exSlider = $("#experienceSlider");
+	exSlider.owlCarousel({
+		items : 3,
+		slideSpeed : 600,
+		itemsDesktop : [1000,3],
+		itemsDesktopSmall : [900,3],
+		itemsTablet: [800,2],
+		itemsMobile : [500, 1],
+		pagination : false
+	});
+	var exData = exSlider.data('owlCarousel');
+
+
+	var exTgt = $('.exp-ctrl').find('.go');
+	exTgt.on('click', function(e){
+		e.preventDefault();
+		if($(this).hasClass('go-left')){
+			exData.prev();
+		} else {
+			exData.next();
+		}
+	});
+
+
+	var edSlider = $("#educationSlider");
+		edSlider.owlCarousel({
+		slideSpeed : 600,
+		items : 3,
+		itemsDesktop : [1000,3],
+		itemsDesktopSmall : [900,3],
+		itemsTablet: [800,2],
+		itemsMobile : [500, 1],
+		pagination : false
+	});
+	var edData = edSlider.data('owlCarousel');
+
+
+	var edTgt = $('.edu-ctrl').find('.go');
+	edTgt.on('click', function(e){
+		e.preventDefault();
+
+		if($(this).hasClass('go-left')){
+			edData.prev();
+		} else {
+			edData.next();
+		}
+	});
+
+
+	var tmSlider = $("#teamSlider");
+	tmSlider.owlCarousel({
+		slideSpeed : 600,
+		items : 3,
+		itemsDesktop : [1000,3],
+		itemsDesktopSmall : [900,3],
+		itemsTablet: [800,2],
+		itemsMobile : [500, 1],
+		pagination : false
+	});
+	var tmData = tmSlider.data('owlCarousel');
+
+
+	var tmTgt = $('.tmu-ctrl').find('.go');
+	tmTgt.on('click', function(e){
+		e.preventDefault();
+
+		if ($(this).hasClass('go-left')){
+			tmData.prev();
+		} else {
+			tmData.next();
+		}
+	});
+
+
+	var tesMoSlider = $("#testimonialSlider");
+		tesMoSlider.owlCarousel({
+		slideSpeed : 600,
+		items : 2,
+		itemsDesktop : [1000,2],
+		itemsDesktopSmall : [900,2],
+		itemsTablet: [600,1],
+		itemsMobile : false,
+		pagination : false
+	});
+
+	var tmoData = tesMoSlider.data('owlCarousel');
+
+
+	var tmoTgt = $('.tmo-ctrl').find('.go');
+
+
+	tmoTgt.on('click', function(e){
+		e.preventDefault();
+
+		if($(this).hasClass('go-left')){
+			tmoData.prev();
+		} else {
+			tmoData.next();
+		}
+	});
+
+
+
+
+
+	$('.menu-smooth-scroll').scrollingTo({
+		easing : 'easeOutQuart',
+		animationTime : 1800,
+		callbackBeforeTransition : function(e){
+			if (e.currentTarget.hash !== "") {
+				if ( e.currentTarget.hash !== '#home' ) {
+					$(e.currentTarget).parent().addClass('current').siblings().removeClass('current');
+				}
+			}
+
+			$('.button-collapse').sideNav('hide');
+		},
+		callbackAfterTransition : function(e){
+			if (e.currentTarget.hash !== "") {
+				if ( e.currentTarget.hash === '#home' ) {
+					window.location.hash = '';
+				} else {
+					window.location.hash = e.currentTarget.hash;
+				}
+
+			}
+		}
+	});
+
+
+
+	$('.section-call-to-btn').scrollingTo({
+		easing : 'easeOutQuart',
+		animationTime : 1800,
+		callbackBeforeTransition : function(e){
+
+		},
+		callbackAfterTransition : function(e){
+		}
+	});
+
+	// Animate scrolling on hire me button
+    $('.hire-me-btn').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: $("#contact").offset().top}, 500);
+    });
+
+
+
+
+	// Menu animations plugin
+	(function(){
+		function Menu($element, options){
+
+			var handler,
+			defaults = {
+				domObj : $element,
+				className : 'small-menu',
+				position : '100px',
+				onIntellingenceMenu : function(){},
+				onNormalMenu : function(){}
+			},
+			config = $.extend({}, defaults, options),
+			coreFuns = {
+				displayMenu : function(){
+					if ( config.domObj.hasClass(config.className) ) {
+						config.domObj.removeClass(config.className);
+					}
+				},
+				hideMenu : function(){
+					if ( !config.domObj.hasClass(config.className) ) {
+						config.domObj.addClass(config.className);
+					}
+				}
+			},
+			publicFuns = {
+				intelligent_menu : function(){
+
+					var lastScrollTop = 0, direction;
+
+					if ( handler != undefined ) {
+						$(window).unbind('scroll', handler);
+					}
+
+					handler = function(e){
+						if (e.currentTarget.scrollY > lastScrollTop){
+							direction = 'down';
+						} else {
+							direction = 'up';
+						}
+						lastScrollTop = e.currentTarget.scrollY;
+
+						// check is user scrolling to up or down?
+						if ( direction == 'up' ) {
+						// so you are scrolling to up...
+
+							// lets display menu
+							coreFuns.displayMenu();
+
+						} else {
+						// so you are scrolling to down...
+
+							// se we have to hide only the small menu because the normal menu isn't sticky!
+							coreFuns.hideMenu();
+						}
+					};
+					$(window).bind('scroll', handler);
+
+					config.onNormalMenu();
+				},
+				fixed_menu : function(){
+					if ( handler != undefined ) {
+						$(window).unbind('scroll', handler);
+					}
+
+					handler = function(e){
+						// check have we display small menu or normal menu ?
+						coreFuns.displayMenu();
+					};
+
+					$(window).bind('scroll', handler);
+
+					config.onNormalMenu();
+				},
+				mobile_intelligent_menu : function(){
+
+					if ( jQuery.browser.mobile === true ) {
+						this.intelligent_menu();
+					} else {
+						this.fixed_menu();
+					}
+				}
+			};
+
+			return publicFuns;
+		}
+
+	    $.fn.menu = function( options ){
+	        var $element = this.first();
+	        var menuFuns = new Menu( $element, options );
+	        return menuFuns;
+	    };
+
+	})();
+
+
+	// call to Menu plugin
+	var menuFun = $('header').menu({
+		className : 'hide-menu',
+		position : '100px'
+	});
+
+	window.menuFun = menuFun;
+
+
+	/* Choose your navigation style */
+
+	menuFun.intelligent_menu(); // Hide intelligently
+	// menuFun.fixed_menu(); // Always fixed
+	// menuFun.mobile_intelligent_menu(); // Hide on Mobile Devices
+
+
+	$('#switch input').on('change', function(e){
+
+		var menuId = this.id;
+
+		if ( menuId === 'menu1' ) {
+
+			menuFun.fixed_menu();
+
+		} else if( menuId === 'menu2' ) {
+
+			menuFun.intelligent_menu();
+
+		} else {
+
+			menuFun.mobile_intelligent_menu();
+
+		}
+	});
+
+
+
+
+
+	// window scroll Sections scrolling
+
+	(function(){
+		var sections = $(".scroll-section");
+
+		function getActiveSectionLength(section, sections) {
+			return sections.index(section);
+		}
+		
+		if ( sections.length > 0 ) {
+
+
+			sections.waypoint({
+				handler: function(event, direction) {
+					var active_section, active_section_index, prev_section_index;
+					active_section = $(this);
+					active_section_index = getActiveSectionLength($(this), sections);
+					prev_section_index = ( active_section_index - 1 );
+
+					if (direction === "up") {
+						scrollDirection = "up";
+						if ( prev_section_index < 0 ) {
+							active_section = active_section;
+						} else {
+							active_section = sections.eq(prev_section_index);
+						}
+					} else {
+						scrollDirection = "Down";
+					}
+
+
+					if ( active_section.attr('id') != 'home' ) {
+						var active_link = $('.menu-smooth-scroll[href="#' + active_section.attr("id") + '"]');
+						active_link.parent('li').addClass("current").siblings().removeClass("current");
+					} else {
+						$('.menu-smooth-scroll').parent('li').removeClass('current');
+					}
+				},
+				offset: '35%'
+			});
+		}
+
+	}());
+
+
+
+
+
+
+
+
+
+
+	// Map
+	var mapStyle = [
+	    {
+	        "featureType": "landscape",
+	        "stylers": [
+	            {
+	                "saturation": -100
+	            },
+	            {
+	                "lightness": 50
+	            },
+	            {
+	                "visibility": "on"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "poi",
+	        "stylers": [
+	            {
+	                "saturation": -100
+	            },
+	            {
+	                "lightness": 40
+	            },
+	            {
+	                "visibility": "simplified"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.highway",
+	        "stylers": [
+	            {
+	                "saturation": -100
+	            },
+	            {
+	                "visibility": "simplified"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.arterial",
+	        "stylers": [
+	            {
+	                "saturation": -100
+	            },
+	            {
+	                "lightness": 20
+	            },
+	            {
+	                "visibility": "on"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "road.local",
+	        "stylers": [
+	            {
+	                "saturation": -100
+	            },
+	            {
+	                "lightness": 30
+	            },
+	            {
+	                "visibility": "on"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "transit",
+	        "stylers": [
+	            {
+	                "saturation": -100
+	            },
+	            {
+	                "visibility": "simplified"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "administrative.province",
+	        "stylers": [
+	            {
+	                "visibility": "off"
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "water",
+	        "elementType": "labels",
+	        "stylers": [
+	            {
+	                "visibility": "on"
+	            },
+	            {
+	                "lightness": -0
+	            },
+	            {
+	                "saturation": -0
+	            }
+	        ]
+	    },
+	    {
+	        "featureType": "water",
+	        "elementType": "geometry",
+	        "stylers": [
+	            {
+	                "hue": "#00baff"
+	            },
+	            {
+	                "lightness": -10
+	            },
+	            {
+	                "saturation": -95
+	            }
+	        ]
+	    }
+	];
+
+	var $mapWrapper = $('#map'), draggableOp;
+
+
+	if ( jQuery.browser.mobile === true ) {
+		draggableOp = false;
+	} else {
+		draggableOp = true;
+	}
+	//api AIzaSyBVYdEQqY3XnIu1b3hVTczk1Keu_7LnhQs 50.144243, 18.776017 50.127744, 18.798217
+	if ( $mapWrapper.length > 0 ) {
+		var map = new GMaps({
+			div: '#map',
+			lat : 50.127744,
+			lng : 18.798217,
+			scrollwheel: false,
+			draggable: draggableOp,
+			zoom: 16,
+			disableDefaultUI: true,
+			styles : mapStyle
+		});
+
+		map.addMarker({
+			lat : 50.127744,
+			lng : 18.798217,
+			infoWindow: {
+				content: '<p>Axis Software</p>'
+			}
+		});
+	}
+
+}(jQuery));
+
+
+
+$(window).load(function(){
+	
+	// section calling
+	$('.section-call-to-btn.call-to-home').waypoint({
+		handler: function(event, direction) {
+			var $this = $(this);
+			$this.fadeIn(0).removeClass('btn-hidden');
+			var showHandler = setTimeout(function(){
+				$this.addClass('btn-show').removeClass('btn-up');
+				clearTimeout(showHandler);
+			}, 1500);
+		},
+		offset: '90%'
+	});
+
+	
+	$('.section-call-to-btn.call-to-about').delay(1000).fadeIn(0, function(){
+		var $this = $(this);
+		$this.removeClass('btn-hidden');
+		var showHandler = setTimeout(function(){
+			$this.addClass('btn-show').removeClass('btn-up');
+			clearTimeout(showHandler);
+		}, 1600);
+	});
+
+
+
+	// portfolio Mesonary
+	if ( $('#protfolio-msnry').length > 0 ) {
+		// init Isotope
+		var loading = 0;
+		var portfolioMsnry = $('#protfolio-msnry').isotope({
+			itemSelector: '.single-port-item',
+			layoutMode: 'fitRows'
+		});
+
+
+		$('#portfolio-msnry-sort a').on( 'click', function(e) {
+
+			e.preventDefault();
+
+			if ( $(this).parent('li').hasClass('active') ) {
+				return false;
+			} else {
+				$(this).parent('li').addClass('active').siblings('li').removeClass('active');
+			}
+
+			var $this = $(this);
+			var filterValue = $this.data('target');
+
+			// set filter for Isotope
+			portfolioMsnry.isotope({ filter: filterValue });
+
+			return $(this);
+		});
+
+		$('#portfolio-item-loader').on( 'click', function(e) {
+			e.preventDefault();
+			var $this = $(this);
+
+			for (var i = 0; i < 3; i++) {
+				$.get("portfolioitems.html", function(data, status){
+					var lists, numb, target = $('#portfolio-msnry-sort li.active a').data('target');
+
+					lists = ( target != '*' ) ? $(data).find('li'+target) : $(data).find('li');
+
+					if (lists.length > 0) {
+						numb = Math.floor(Math.random() * lists.length);
+						portfolioMsnry.isotope( 'insert', lists.eq(numb) );
+
+						loading++;
+						( loading == 9 ) ? $this.remove() : "";
+					}
+
+				});
+			}
+
+		});
+
+		var portfolioModal = $('#portfolioModal'),
+			portImgArea = portfolioModal.find('.model-img'),
+			portTitle = portfolioModal.find('.modal-content .title'),
+			portContent = portfolioModal.find('.modal-content .m-content'),
+			portLink = portfolioModal.find('.modal-footer .modal-action');
+		
+		$('#protfolio-msnry').delegate('a.modal-trigger', 'click', function(e){
+			e.preventDefault();
+			var $this = $(this);
+			portfolioModal.openModal({
+				dismissible: true,
+				opacity: '.4',
+				in_duration: 400,
+				out_duration: 400,
+				ready: function() {
+					var imgSrc = $this.data('image-source'),
+					title = $this.data('title'),
+					content = $this.data('content'),
+					demoLink = $this.data('demo-link');
+
+
+					if ( imgSrc ) {
+						portImgArea.html('<img src="'+imgSrc+'" alt="Portfolio Image" />');
+					};
+
+
+					portTitle.text(title);
+					portContent.text(content);
+					portLink.attr('href', demoLink);
+				}
+			});
+		});
+	}
+
+	// skills animation
+	$('#skillSlider').waypoint({
+		handler: function(event, direction) {
+			$(this).find('.singel-hr-inner').each(function(){
+				var height = $(this).data('height');
+				$(this).css('height', height);
+			});
+		},
+		offset: '60%'
+	});
+
+
+	// Wow init
+	new WOW({
+		offset: 200,
+		mobile: false
+	}).init();
+});
+
+
+
+
+
+/*=========== count up statistic ==========*/
+
+var $countNumb = $('.countNumb');
+
+if ( $countNumb.length > 0 ) {
+	$countNumb.counterUp({
+		delay: 15,
+		time: 1700
+	});
+}
+
+
+var imNotARobot = function() {
+	console.log('not a rabot')
+	var btn = $('#contactForm').find('button, input[type="submit"]');
+	btn.removeAttr('disabled');
+}
+
+var expiredHuman = function () {
+	var btn = $('#contactForm').find('button, input[type="submit"]');
+	btn.removeAttr('disabled');
+};
+
+$(document).ready(function() {
+
+	$("#home").particles({
+		amount:100,
+		duration:{random:true},
+		speed:{speed:1},
+		layout:"after",
+		color:{color:{r:200,g:0,b:200},random:true,min:{r:200,g:200,b:0}},
+		opacity:{ //opacity
+			opacity:0.6,  //default opacity 1 if opacity.animation or opacity.random it is max opacity
+			random:false, //random between opacity.opacity and opacity.min
+			min:0.6,
+			max:1, //minimum opacity default 0
+			animation:true, //if true opacity increases until max opacity
+			decay:true  //if true opacity decreases until min opacity
+		},
+		radius:{  //radius
+			radius:2, //if radius random is true then this is max radius
+			random:false, //random radius between radius.radius and radius.min
+			min:2 //minimum radius if radius.random is false then it is omitted
+		},
+		position:{  //start position inside element
+			x:0,  //x position default 0
+			y:0,  //y position default 0
+			random:true  //if true get random point inside element
+		},
+	});
+
+	var btn = $('#contactForm').find('button, input[type="submit"]');
+	btn.attr('disabled', 'disabled');
+
+	$('#contactForm').validate({ // initialize the plugin
+		showErrors: function(errorMap, errorList) {
+			// Do nothing here
+		},
+		rules: {
+			contactName: {
+				required: true
+			},
+			contactEmail: {
+				required: true,
+				email: true
+			},
+			contactSubject: {
+				required: true
+			},
+			contactMessage: {
+				required: true
+			}
+		},
+		submitHandler: function(form, event) {
+			event.preventDefault();
+			console.log('SUBMIT HANDLER');
+			var $this = $(form),
+				data = $(form).serialize(),
+				dataArray = $(form).serializeArray().reduce(function(prev, current) {
+					prev[current.name] = current.value;
+					return prev;
+				}, {}),
+				name = $this.find('#contact_name'),
+				email = $this.find('#email'),
+				subject = $this.find('#subject'),
+				message = $this.find('#textarea1'),
+				loader = $this.find('.form-loader-area'),
+				submitBtn = $this.find('button, input[type="submit"]');
+
+			loader.show();
+			submitBtn.attr('disabled', 'disabled');
+
+			function success(response) {
+				name.removeClass('valid');
+				email.removeClass('valid');
+				name.focus();
+				email.addClass('active');
+				message.removeClass('valid');
+				subject.removeClass('valid');
+				swal("Dziękuje!", "Twój e-mail zotał przesłany!", "success");
+				$this.find("input, textarea").val("");
+				grecaptcha.reset(); //reset google recaptcha
+			}
+			$.ajax({
+				type: "POST",
+				//url: "http://localhost:5000",
+				url: "https://axis.herokuapp.com",
+				data: JSON.stringify(dataArray),
+				dataType: "json",
+				contentType: 'application/json'
+			}).done(function(response){
+
+				success(response);
+
+				var hand = setTimeout(function(){
+					loader.hide();
+					submitBtn.removeAttr('disabled');
+					clearTimeout(hand);
+				}, 1000);
+
+			}).fail(function(){
+				sweetAlert("Oops...", "Wystąpił błąd podczas przesyłania e-mail!", "error");
+				var hand = setTimeout(function(){
+					loader.hide();
+					submitBtn.removeAttr('disabled');
+					clearTimeout(hand);
+				}, 1000);
+			});
+		}
+	});
+
+
+});
+

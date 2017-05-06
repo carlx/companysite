@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JS Bin</title>
+	<script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+<form id="login_form">
+
+	<input type="text" name="dupa">
+	<div class="g-recaptcha" data-sitekey="6LcveB8UAAAAAPxX2BE77vz2jfZ0te3Ku6L50QKt"></div>
+	<button type="submit">Submit</button>
+</form>
+
+<script>
+	$(function() { //shorthand document.ready function
+		$('#login_form').on('submit', function(e) { //use on if jQuery 1.7+
+			e.preventDefault();  //prevent form from submitting
+			var data = $("#login_form :input").serializeArray();
+			console.log(data); //use the console for debugging, F12 in Chrome, not alerts
+			$.ajax({
+						url: 'http://localhost:3008',
+						type: "POST",
+						data: JSON.stringify({'g-recaptcha-response': data[1].value}),
+						dataType: "json",
+						contentType: 'application/json',
+					}
+
+			)
+					.done(function(success) {
+						console.log(success);
+					})
+					.fail(function(error) {
+						alert( "error" );
+					});
+		});
+	});
+</script>
+
+</body>
+</html>
